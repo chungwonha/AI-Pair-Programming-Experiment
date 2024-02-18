@@ -1,0 +1,67 @@
+spring:
+  datasource:
+    url: ${DB_URL}
+    username: ${DB_USER}
+    password: ${DB_PASSWORD}
+#    auto-commit: false
+  jpa:
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+#    auto-commit: false
+file:
+  wsj:
+    job:
+      csv-folder-path: "${WSJ_JOB_CSV_PATH}"
+    housing:
+      csv-folder-path: "${WSJ_HOUSING_CSV_PATH}"
+    consumer:
+      csv-folder-path: "${WSJ_CONSUMER_CSV_PATH}"
+    earnings:
+      csv-folder-path: "${WSJ_EARNINGS_CSV_PATH}"
+    earnings-more:
+      csv-folder-path: "${WSJ_EARNINGS_MORE_CSV_PATH}"
+    trade:
+      csv-folder-path: "${WSJ_TRADE_CSV_PATH}"
+    global-economy:
+      csv-folder-path: "${WSJ_GLOBAL_CSV_PATH}"
+    central-banking:
+      csv-folder-path: "${WSJ_CENTRAL_BANKING_CSV_PATH}"
+  wpe:
+    csv-folder-path: "${WPE_CSV_PATH}"
+
+  graph-file:
+    path: "${GRAPH_FILE_PATH}"
+    #"C:/Users/chung/Downloads/graph"
+
+logging:
+  level:
+    root: INFO
+    com.cool.app: DEBUG  # Change 'com.cool.app' to your package name
+  pattern:
+    console: "%d{yyyy-MM-dd HH:mm:ss} - %msg%n"
+    file: "%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{36} - %msg%n"
+
+openai:
+  api:
+    key: "${OPENAI_API_KEY}"
+    url: "${OPENAI_API_URL}"   #"https://api.openai.com/v1/chat/completions"
+    chat:
+      newsarticlesummary:
+        prompt: "${OPENAI_CHAT_PROMPT_NEWS_ARTICLE_SUMMARY}"
+        temperature: "${OPENAI_CHAT_TEMPERATURE_NEWS_ARTICLE_SUMMARY}"
+        max-tokens: "${OPENAI_CHAT_MAX_TOKENS_NEWS_ARTICLE_SUMMARY}"
+        top-p: "${OPENAI_CHAT_TOP_P_NEWS_ARTICLE_SUMMARY}"
+        frequency-penalty: "${OPENAI_CHAT_FREQUENCY_PENALTY_NEWS_ARTICLE_SUMMARY}"
+        presence-penalty: "${OPENAI_CHAT_PRESENCE_PENALTY_NEWS_ARTICLE_SUMMARY}"
+    response:
+      html-path: "${OPENAI_RESPONSE_HTML_PATH}"
+
+aws:
+  accessKeyId: "${AWS_ACCESS_KEY_ID}"
+  secretKey: "${AWS_SECRET_KEY}"
+  s3:
+    bucket-name: "${AWS_S3_BUCKET_NAME}"
+    region: "${AWS_S3_REGION}"
+

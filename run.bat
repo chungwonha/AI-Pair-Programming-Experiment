@@ -1,0 +1,13 @@
+java -jar ./target/newssentimentanalysis-0.0.1-SNAPSHOT.jar ^
+  --WSJ_JOB_CSV_PATH="C:/Users/chung/Downloads/wsjjob" ^
+  --WSJ_HOUSING_CSV_PATH="C:/Users/chung/Downloads/wsjhousing" ^
+  --WSJ_CONSUMER_CSV_PATH="C:/Users/chung/Downloads/wsjconsumer" ^
+  --WSJ_EARNINGS_CSV_PATH="C:/Users/chung/Downloads/wsjearnings" ^
+  --WSJ_EARNINGS_MORE_CSV_PATH="C:/Users/chung/Downloads/wsjearningsmore" ^
+  --WSJ_TRADE_CSV_PATH="C:/Users/chung/Downloads/wsjtrade" ^
+  --WSJ_GLOBAL_CSV_PATH="C:/Users/chung/Downloads/wsjglobal" ^
+  --WSJ_CENTRAL_BANKING_CSV_PATH="C:/Users/chung/Downloads/wsjcentralbanking" ^
+  --WPE_CSV_PATH="C:/Users/chung/Downloads/washingtonpost"  ^
+  --GRAPH_FILE_PATH="C:/Users/chung/Downloads/graph"  ^
+  --DB_USER="user"  ^
+  --DB_PASSWORD="password"
